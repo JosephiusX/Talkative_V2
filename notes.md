@@ -55,7 +55,9 @@ weyre going to use our playground folder to set this up for now
 starting with actions
 
     topics.js
-        swapping 'amount' for 'usage' and 'expense' for 'topic'
+        swapping 
+        'amount' for 'usage'
+        'expense' for 'topic'
             done
 
     topic.js
@@ -81,5 +83,26 @@ Next Redicers
 then Store
 
     ConfigureStore.js
+
+No unusual issues with build
+    compiled successfully
+
+adding needed components
+
+    TopicList.js
+
+    TopicListItem.js
+
+    TopicForm.js
+
+    TopicListFilters.js
+
+    PhraseList.js
+
+    PhraseListItem
+
+    PhraseListFilters.js
+
+    PhraseForm.js
 
 
