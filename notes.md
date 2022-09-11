@@ -61,7 +61,7 @@ starting with actions
             done
 
     topic.js
-        "phrase" instead of "discription"
+        "phrases" instead of "discription"
         "topic" instead of "note"
             done
 
@@ -89,20 +89,17 @@ No unusual issues with build
 
 adding needed components
 
-    TopicList.js
+in components
 
-    TopicListItem.js
+    touch TopicList.js TopicListItem.js TopicForm.js TopicListFilters.js PhraseList.js PhraseListItem.js PhraseListFilters.js EditPhrasePage.js PhraseForm.js
 
-    TopicForm.js
 
-    TopicListFilters.js
+        listItems
+            DONE
 
-    PhraseList.js
+        lists
+            DONE
 
-    PhraseListItem
-
-    PhraseListFilters.js
-
-    PhraseForm.js
+        forms
 
 

@@ -3,7 +3,7 @@ import uuid from 'uuid';
 // ADD_PHRASE
 export const addPhrase = (
   {
-    phrase = '',
+    phrases = '',
     topic = '',
     usage = 0,
     createdAt = 0
@@ -12,7 +12,7 @@ export const addPhrase = (
   type: 'ADD_PHRASE',
   phrase: {
     id: uuid(),
-    phrase,
+    phrases,
     topic,
     usage,
     createdAt
