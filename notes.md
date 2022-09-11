@@ -49,3 +49,37 @@ weyre going to use our playground folder to set this up for now
         "webpack": "3.1.0",
         "webpack-dev-server": "2.5.1"
     }
+
+# 3 React With Redux
+
+starting with actions
+
+    topics.js
+        swapping 'amount' for 'usage' and 'expense' for 'topic'
+            done
+
+    topic.js
+        "phrase" instead of "discription"
+        "topic" instead of "note"
+            done
+
+    filters.js
+        nothing changed
+            done
+
+Next Redicers
+
+    topics.js
+        done
+
+    topic.js
+        done
+
+    filters.js  
+        done
+
+then Store
+
+    ConfigureStore.js
+
+
