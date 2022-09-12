@@ -11,7 +11,6 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-
 store.dispatch(addTopic({ description: 'Water bill', amount: 4500 }));
 store.dispatch(addTopic({ description: 'Gas bill', createdAt: 1000 }));
 store.dispatch(addTopic({ description: 'Rent', amount: 109500 }));
@@ -27,3 +26,10 @@ const jsx = (
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));
+
+// const root = ReactDOM.createRoot(document.getElementById('app'))
+// root.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>
+// )

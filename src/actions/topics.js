@@ -6,16 +6,16 @@ export const addTopic = (
     description = '',
     note = '',
     amount = 0,
-    createdAt = 0
+    createdAt = 0,
   } = {}
 ) => ({
   type: 'ADD_TOPIC',
-  expense: {
+  topic: {
     id: uuid(),
     description,
     note,
     amount,
-    createdAt
+    createdAt,
   }
 });
 

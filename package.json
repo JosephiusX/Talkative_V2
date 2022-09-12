@@ -1,8 +1,8 @@
 {
-  "name": "expensify",
+  "name": "talkativev2",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Joseph Granville",
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",

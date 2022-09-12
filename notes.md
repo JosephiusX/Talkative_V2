@@ -50,6 +50,13 @@ weyre going to use our playground folder to set this up for now
         "webpack-dev-server": "2.5.1"
     }
 
+after installing , add thease to babbel rc:
+
+    "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ]
+
 # 3 React With Redux
 
 starting with actions
