@@ -11,9 +11,10 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-store.dispatch(addTopic({ phrases: 'Water bill', usage: 4500 }));
-store.dispatch(addTopic({ phrases: 'Gas bill', createdAt: 1000 }));
-store.dispatch(addTopic({ phrases: 'Rent', usage: 109500 }));
+
+store.dispatch(addTopic({ description: 'Water bill', amount: 4500 }));
+store.dispatch(addTopic({ description: 'Gas bill', createdAt: 1000 }));
+store.dispatch(addTopic({ description: 'Rent', amount: 109500 }));
 
 const state = store.getState();
 const visibleTopics = getVisibleTopics(state.topics, state.filters);

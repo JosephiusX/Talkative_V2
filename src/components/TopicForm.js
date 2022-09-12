@@ -8,7 +8,7 @@ export default class TopicForm extends React.Component {
     super(props);
 
     this.state = {
-      phrases: props.topic ? props.topic.phrases : '',
+      description: props.topic ? props.topic.description : '',
       note: props.topic ? props.topic.note : '',
       amount: props.topic ? (props.topic.amount / 100).toString() : '',
       createdAt: props.topic ? moment(props.topic.createdAt) : moment(),
@@ -16,19 +16,19 @@ export default class TopicForm extends React.Component {
       error: ''
     };
   }
-  onphraseChange = (e) => {
-    const phrase = e.target.value;
-    this.setState(() => ({ phrase }));
+  onDescriptionChange = (e) => {
+    const description = e.target.value;
+    this.setState(() => ({ description }));
   };
-  ontopicChange = (e) => {
-    const topic = e.target.value;
-    this.setState(() => ({ topic }));
+  onNoteChange = (e) => {
+    const note = e.target.value;
+    this.setState(() => ({ note }));
   };
-  onusageChange = (e) => {
-    const usage = e.target.value;
+  onAmountChange = (e) => {
+    const amount = e.target.value;
 
-    if (!usage || usage.match(/^\d{1,}(\.\d{0,2})?$/)) {
-      this.setState(() => ({ usage }));
+    if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState(() => ({ amount }));
     }
   };
   onDateChange = (createdAt) => {
@@ -42,15 +42,15 @@ export default class TopicForm extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    if (!this.state.phrase || !this.state.usage) {
-      this.setState(() => ({ error: 'Please provide phrase and usage.' }));
+    if (!this.state.description || !this.state.amount) {
+      this.setState(() => ({ error: 'Please provide description and amount.' }));
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
-        phrase: this.state.phrase,
-        usage: parseFloat(this.state.usage, 10) * 100,
+        description: this.state.description,
+        amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
-        topic: this.state.topic
+        note: this.state.note
       });
     }
   };
@@ -61,16 +61,16 @@ export default class TopicForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
-            placeholder="phrase"
+            placeholder="Description"
             autoFocus
-            value={this.state.phrase}
-            onChange={this.onphraseChange}
+            value={this.state.description}
+            onChange={this.onDescriptionChange}
           />
           <input
             type="text"
-            placeholder="usage"
-            value={this.state.usage}
-            onChange={this.onusageChange}
+            placeholder="Amount"
+            value={this.state.amount}
+            onChange={this.onAmountChange}
           />
           <SingleDatePicker
             date={this.state.createdAt}
@@ -81,12 +81,12 @@ export default class TopicForm extends React.Component {
             isOutsideRange={() => false}
           />
           <textarea
-            placeholder="Add a topic for your topic (optional)"
-            value={this.state.topic}
-            onChange={this.ontopicChange}
+            placeholder="Add a note for your topic (optional)"
+            value={this.state.note}
+            onChange={this.onNoteChange}
           >
           </textarea>
-          <button>Add Topic</button>
+          <button>Add topic</button>
         </form>
       </div>
     )

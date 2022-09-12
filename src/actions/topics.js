@@ -3,18 +3,18 @@ import uuid from 'uuid';
 // ADD_TOPIC
 export const addTopic = (
   {
-    topic = '',
-    phrases = '',
-    usage = 0,
+    description = '',
+    note = '',
+    amount = 0,
     createdAt = 0
   } = {}
 ) => ({
   type: 'ADD_TOPIC',
-  topic: {
+  expense: {
     id: uuid(),
-    topic,
-    phrases,
-    usage,
+    description,
+    note,
+    amount,
     createdAt
   }
 });
