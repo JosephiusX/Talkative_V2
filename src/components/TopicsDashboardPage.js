@@ -1,9 +1,12 @@
 import React from 'react';
+import TopicList from './TopicList';
+import ListFilters from './ListFilters';
 
-const TopicsDashboardPage = () => (
+const TopicDashboardPage = () => (
   <div>
-    This is from my TopicsDashboardPage component!
+    <ListFilters />
+    <TopicList />
   </div>
 );
 
-export default TopicsDashboardPage;
+export default TopicDashboardPage;

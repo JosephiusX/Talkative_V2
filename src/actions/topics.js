@@ -3,8 +3,8 @@ import uuid from 'uuid';
 // ADD_TOPIC
 export const addTopic = (
   {
-      topic = '',
-    phrase = '',
+    topic = '',
+    phrases = '',
     usage = 0,
     createdAt = 0
   } = {}
@@ -13,7 +13,7 @@ export const addTopic = (
   topic: {
     id: uuid(),
     topic,
-    phrase,
+    phrases,
     usage,
     createdAt
   }

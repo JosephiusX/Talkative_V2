@@ -61,7 +61,7 @@ starting with actions
             done
 
     topic.js
-        "phrases" instead of "discription"
+        "phrases" instead of "discription" updated 'phrase' to 'phrases' for this instance
         "topic" instead of "note"
             done
 
@@ -91,7 +91,7 @@ adding needed components
 
 in components
 
-    touch TopicList.js TopicListItem.js TopicForm.js TopicListFilters.js PhraseList.js PhraseListItem.js PhraseListFilters.js EditPhrasePage.js PhraseForm.js
+    touch *TopicList.js *TopicListItem.js *TopicForm.js ListFilters.js PhraseList.js PhraseListItem.js EditPhrasePage.js PhraseForm.js
 
 
         listItems
@@ -101,5 +101,11 @@ in components
             DONE
 
         forms
+            DONE
+
+        list filter (a single should work for both)
+
+Updating Page components
+
 
 
