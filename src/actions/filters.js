@@ -9,9 +9,9 @@ export const sortByDate = () => ({
   type: 'SORT_BY_DATE'
 });
 
-// SORT_BY_AMOUNT
-export const sortByAmount = () => ({
-  type: 'SORT_BY_AMOUNT'
+// SORT_BY_USAGE
+export const sortByUsage = () => ({
+  type: 'SORT_BY_USAGE'
 });
 
 // SET_START_DATE

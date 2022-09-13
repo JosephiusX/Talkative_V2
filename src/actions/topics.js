@@ -4,7 +4,7 @@ import uuid from 'uuid';
 export const addTopic = (
   {
     description = '',
-    note = '',
+    phrases = '',
     amount = 0,
     createdAt = 0,
   } = {}
@@ -13,7 +13,7 @@ export const addTopic = (
   topic: {
     id: uuid(),
     description,
-    note,
+    phrases,
     amount,
     createdAt,
   }
