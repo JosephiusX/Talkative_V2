@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import TopicDashboardPage from '../components/TopicDashboardPage';
-import AddTopicPage from '../components/AddTopicPage';
-import EditTopicPage from '../components/EditTopicPage';
-import NotesPage from '../components/NotesPage';
-import NotFoundPage from '../components/NotFoundPage';
+import TopicDashboardPage from '../components/Topic/TopicDashboardPage';
+import AddTopicPage from '../components/Pages/AddTopicPage';
+import EditTopicPage from '../components/Pages/EditTopicPage';
+import NotesPage from '../components/Pages/NotesPage';
+import NotFoundPage from '../components/Pages/NotFoundPage';
 import Header from '../components/Header';
 
 const AppRouter = () => (

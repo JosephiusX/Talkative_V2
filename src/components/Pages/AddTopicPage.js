@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import TopicForm from './TopicForm';
-import { addTopic } from '../actions/topics';
+import TopicForm from '../Topic/TopicForm';
+import { addTopic } from '../../actions/topics';
 
 const AddTopicPage = (props) => (
   <div>

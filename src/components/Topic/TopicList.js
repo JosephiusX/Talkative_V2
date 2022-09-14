@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TopicListItem from './TopicListItem';
-import selectTopics from '../selectors/topics';
+import selectTopics from '../../selectors/topics';
 
 const TopicList = (props) => (
   <div>
