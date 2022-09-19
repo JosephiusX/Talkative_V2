@@ -23,4 +23,5 @@ see docs for more:
 
 #* Heres where I need to simplify
 
-    Goals
+working on Notes Components as well as actions, reducers, selectors before adding to AppRouter
+

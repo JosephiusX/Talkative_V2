@@ -9,7 +9,7 @@ export default class TopicForm extends React.Component {
 
     this.state = {
       description: props.topic ? props.topic.description : '',
-      note: props.topic ? props.topic.note : '',
+      phrases: props.topic ? props.topic.phrases : '',
       amount: props.topic ? (props.topic.amount / 100).toString() : '',
       createdAt: props.topic ? moment(props.topic.createdAt) : moment(),
       calendarFocused: false,
@@ -22,7 +22,7 @@ export default class TopicForm extends React.Component {
   };
   onNoteChange = (e) => {
     const note = e.target.value;
-    this.setState(() => ({ note }));
+    this.setState(() => ({ phrases }));
   };
   onAmountChange = (e) => {
     const amount = e.target.value;
@@ -50,7 +50,7 @@ export default class TopicForm extends React.Component {
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
-        note: this.state.note
+        phrases: this.state.phrases
       });
     }
   };
@@ -81,8 +81,8 @@ export default class TopicForm extends React.Component {
             isOutsideRange={() => false}
           />
           <textarea
-            placeholder="Add a note for your topic (optional)"
-            value={this.state.note}
+            placeholder="Add a phrases for your topic (optional)"
+            value={this.state.phrases}
             onChange={this.onNoteChange}
           >
           </textarea>

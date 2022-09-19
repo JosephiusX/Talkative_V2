@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import NoteList from '../Notes/NoteList';
+import NoteListFilters from '../Notes/NoteListFilters';
 
 const NotesPage = () => (
-    <div>
-    NotesPage will go here
+  <div>
+    <NoteListFilters />
+    <NoteList />
   </div>
 );
 
 export default NotesPage;
+   
