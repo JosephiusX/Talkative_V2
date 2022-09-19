@@ -25,3 +25,10 @@ see docs for more:
 
 working on Notes Components as well as actions, reducers, selectors before adding to AppRouter
 
+Note List is visible. 
+
+    now we just to place a link to a add notes page
+
+when creating note i am redirected to Note List page as desired, 
+    
+    ? not seeing any notes displayed

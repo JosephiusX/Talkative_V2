@@ -20,8 +20,8 @@ export default class TopicForm extends React.Component {
     const description = e.target.value;
     this.setState(() => ({ description }));
   };
-  onNoteChange = (e) => {
-    const note = e.target.value;
+  onPhrasesChange = (e) => {
+    const phrases = e.target.value;
     this.setState(() => ({ phrases }));
   };
   onAmountChange = (e) => {
@@ -83,7 +83,7 @@ export default class TopicForm extends React.Component {
           <textarea
             placeholder="Add a phrases for your topic (optional)"
             value={this.state.phrases}
-            onChange={this.onNoteChange}
+            onChange={this.onphrasesChange}
           >
           </textarea>
           <button>Add topic</button>
