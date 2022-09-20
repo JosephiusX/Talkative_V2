@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import TopicList from '../Topic/TopicList';
-import TopicListFilters from '../Topic/TopicListFilters';
+import TopicList from './TopicList';
+import TopicListFilters from './TopicListFilters';
 
 const TopicsPage = () => (
   <div>

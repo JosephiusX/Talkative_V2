@@ -8,17 +8,14 @@ export default class TopicForm extends React.Component {
     super(props);
 
     this.state = {
-      description: props.topic ? props.topic.description : '',
+      topic: props.topic ? props.topic.topic : '',
       phrases: props.topic ? props.topic.phrases : '',
-      amount: props.topic ? (props.topic.amount / 100).toString() : '',
-      createdAt: props.topic ? moment(props.topic.createdAt) : moment(),
-      calendarFocused: false,
       error: ''
     };
   }
-  onDescriptionChange = (e) => {
-    const description = e.target.value;
-    this.setState(() => ({ description }));
+  onTopicChange = (e) => {
+    const topic = e.target.value;
+    this.setState(() => ({ topic }));
   };
   onPhrasesChange = (e) => {
     const phrases = e.target.value;
@@ -42,14 +39,12 @@ export default class TopicForm extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    if (!this.state.description || !this.state.amount) {
-      this.setState(() => ({ error: 'Please provide description and amount.' }));
+    if (!this.state.topic) {
+      this.setState(() => ({ error: 'Please provide topic' }));
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
-        description: this.state.description,
-        amount: parseFloat(this.state.amount, 10) * 100,
-        createdAt: this.state.createdAt.valueOf(),
+        topic: this.state.topic,
         phrases: this.state.phrases
       });
     }
@@ -61,29 +56,15 @@ export default class TopicForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
-            placeholder="Description"
+            placeholder="topic"
             autoFocus
-            value={this.state.description}
-            onChange={this.onDescriptionChange}
-          />
-          <input
-            type="text"
-            placeholder="Amount"
-            value={this.state.amount}
-            onChange={this.onAmountChange}
-          />
-          <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
+            value={this.state.topic}
+            onChange={this.onTopicChange}
           />
           <textarea
             placeholder="Add a phrases for your topic (optional)"
             value={this.state.phrases}
-            onChange={this.onphrasesChange}
+            onChange={this.onPhrasesChange}
           >
           </textarea>
           <button>Add topic</button>

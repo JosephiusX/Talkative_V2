@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import TopicsPage from '../components/Pages/TopicsPage';
-import AddTopicPage from '../components/Pages/AddTopicPage';
-import AddNotePage from '../components/Pages/AddNotePage';
-import EditTopicPage from '../components/Pages/EditTopicPage';
-import EditNotePage from '../components/Pages/EditNotePage';
-import NotesPage from '../components/Pages/NotesPage';
+import TopicsPage from '../components/Topic/TopicsPage';
+import AddTopicPage from '../components/Topic/AddTopicPage';
+import AddNotePage from '../components/Notes/AddNotePage';
+import EditTopicPage from '../components/Topic/EditTopicPage';
+import EditNotePage from '../components/Notes/EditNotePage';
+import NotesPage from '../components/Notes/NotesPage';
 import NotFoundPage from '../components/Pages/NotFoundPage';
 import Header from '../components/Header';
 
