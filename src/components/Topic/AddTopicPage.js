@@ -9,7 +9,7 @@ const AddTopicPage = (props) => (
     <TopicForm
       onSubmit={(topic) => {
         props.dispatch(addTopic(topic));
-        props.history.push('/');
+        props.history.push('/topics');
       }}
     />
   </div>

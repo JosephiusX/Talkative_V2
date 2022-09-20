@@ -56,4 +56,6 @@ Need to make store entries unique for Notes
                         check srelector:
                         check components to make changes to instances:
              /topics : 'description' to 'topic'
-                reduced topics to 'topic' and 'phrases' schemas     
+                reduced topics to 'topic'
+                
+        changing ' /' to either '/topics' or '/notes'

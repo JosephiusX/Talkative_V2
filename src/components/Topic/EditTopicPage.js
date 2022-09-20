@@ -10,12 +10,12 @@ const EditTopicPage = (props) => {
         topic={props.topic}
         onSubmit={(topic) => {
           props.dispatch(editTopic(props.topic.id, topic));
-          props.history.push('/');
+          props.history.push('/topics');
         }}
       />
       <button onClick={() => {
         props.dispatch(removeTopic({ id: props.topic.id }));
-        props.history.push('/');
+        props.history.push('/topics');
       }}>Remove</button>
     </div>
   );

@@ -12,7 +12,7 @@ export const addTopic = (
     id: uuid(),
     topic,
     phrases,
-  }
+  }                                                                                            
 });
 
 // REMOVE_TOPIC

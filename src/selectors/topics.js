@@ -4,17 +4,12 @@ import moment from 'moment';
 
 export default (topics, { text, sortBy, startDate, endDate }) => {
   return topics.filter((topic) => {
-    const createdAtMoment = moment(topic.createdAt);
-    const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
-    const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
-    const textMatch = topic.description.toLowerCase().includes(text.toLowerCase());
+    const textMatch = topic.title.toLowerCase().includes(text.toLowerCase());
 
-    return startDateMatch && endDateMatch && textMatch;
+    return textMatch;
   }).sort((a, b) => {
     if (sortBy === 'date') {
       return a.createdAt < b.createdAt ? 1 : -1;
-    } else if (sortBy === 'amount') {
-      return a.amount < b.amount ? 1 : -1;
     }
   });
 };

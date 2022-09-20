@@ -6,7 +6,7 @@ import AddNotePage from '../components/Notes/AddNotePage';
 import EditTopicPage from '../components/Topic/EditTopicPage';
 import EditNotePage from '../components/Notes/EditNotePage';
 import NotesPage from '../components/Notes/NotesPage';
-import NotFoundPage from '../components/Pages/NotFoundPage';
+import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 
 const AppRouter = () => (

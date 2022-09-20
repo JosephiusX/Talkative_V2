@@ -9,7 +9,7 @@ export const addNote = (
   } = {}
 ) => ({
   type: 'ADD_NOTE',
-  Note: {
+  note: {
     id: uuid(), 
     title,
     note,
