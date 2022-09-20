@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NoteListItem = ({ id, message, amount, createdAt }) => (
+const NoteListItem = ({ id, message, createdAt }) => (
   <div>
-    <Link to={`/edit/${id}`}>
+    <Link to={`/edit)/${id}`}>
       <h3>{message}</h3>
     </Link>
-    <p>{amount} - {createdAt}</p>
+    <p>{createdAt}</p>
   </div>
 );
 

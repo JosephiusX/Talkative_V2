@@ -8,28 +8,20 @@ export default class NoteForm extends React.Component {
     super(props);
 
     this.state = {
-      description: props.note ? props.note.description : '',
-      message: props.note ? props.note.note : '',
-      amount: props.note ? (props.note.amount / 100).toString() : '',
+      title: props.note ? props.note.title : '',
+      note: props.note ? props.note.note : '',
       createdAt: props.note ? moment(props.note.createdAt) : moment(),
       calendarFocused: false,
       error: ''
     };
   }
-  onDescriptionChange = (e) => {
-    const description = e.target.value;
-    this.setState(() => ({ description }));
+  onTitleChange = (e) => {
+    const title = e.target.value;
+    this.setState(() => ({ title }));
   };
   onNoteChange = (e) => {
-    const message = e.target.value;
-    this.setState(() => ({ message }));
-  };
-  onAmountChange = (e) => {
-    const amount = e.target.value;
-
-    if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
-      this.setState(() => ({ amount }));
-    }
+    const note = e.target.value;
+    this.setState(() => ({ note }));
   };
   onDateChange = (createdAt) => {
     if (createdAt) {
@@ -42,15 +34,14 @@ export default class NoteForm extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    if (!this.state.description || !this.state.amount) {
-      this.setState(() => ({ error: 'Please provide description and amount.' }));
+    if (!this.state.title) {
+      this.setState(() => ({ error: 'Please provide title.' }));
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
-        description: this.state.description,
-        amount: parseFloat(this.state.amount, 10) * 100,
+        title: this.state.title,
         createdAt: this.state.createdAt.valueOf(),
-        message: this.state.message
+        note: this.state.note
       });
     }
   };
@@ -61,16 +52,10 @@ export default class NoteForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
-            placeholder="Description"
+            placeholder="title"
             autoFocus
-            value={this.state.description}
-            onChange={this.onDescriptionChange}
-          />
-          <input
-            type="text"
-            placeholder="Amount"
-            value={this.state.amount}
-            onChange={this.onAmountChange}
+            value={this.state.title}
+            onChange={this.onTitleChange}
           />
           <SingleDatePicker
             date={this.state.createdAt}
@@ -81,7 +66,7 @@ export default class NoteForm extends React.Component {
             isOutsideRange={() => false}
           />
           <textarea
-            placeholder="Add a message for your note (optional)"
+            placeholder="Add a note for your note (optional)"
             value={this.state.note}
             onChange={this.onNoteChange}
           >

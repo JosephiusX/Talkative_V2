@@ -21,6 +21,7 @@ const state = store.getState();
 const visibleTopics = getVisibleTopics(state.topics, state.filters);
 const visibleNotes = getVisibleNotes(state.notes, state.filters);
 console.log(visibleTopics);
+console.log(visibleNotes);
 
 const jsx = (
   <Provider store={store}>

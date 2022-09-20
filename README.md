@@ -32,3 +32,26 @@ Note List is visible.
 when creating note i am redirected to Note List page as desired, 
     
     ? not seeing any notes displayed
+
+Lets get rid of amount to help simplify
+
+    start with actions: done
+    reducers : no ref found
+    selectors : done
+    NoteForm: done
+    NoteListFilters: done
+    NoteListItem: done
+
+EditNotePage needed in pages
+
+    add it to router
+    
+    ? checking for refs in components
+
+Need to make store entries unique for Notes
+
+    in actions/notes:  swapping 'message' to 'note'
+                                'discription' to 'title'
+                        check reducer:
+                        check srelector:
+                        check components to make changes to instances:
