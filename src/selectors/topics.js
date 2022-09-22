@@ -4,9 +4,12 @@ import moment from 'moment';
 
 export default (topics, { text, sortBy, startDate, endDate }) => {
   return topics.filter((topic) => {
-    const textMatch = topic.title.toLowerCase().includes(text.toLowerCase());
+    const createdAtMoment = moment(topic.createdAt);
+    const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
+    const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
+    const textMatch = topic.description.toLowerCase().includes(text.toLowerCase());
 
-    return textMatch;
+    return startDateMatch && endDateMatch && textMatch;
   }).sort((a, b) => {
     if (sortBy === 'date') {
       return a.createdAt < b.createdAt ? 1 : -1;

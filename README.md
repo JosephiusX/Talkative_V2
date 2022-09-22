@@ -58,4 +58,18 @@ Need to make store entries unique for Notes
              /topics : 'description' to 'topic'
                 reduced topics to 'topic'
                 
-        changing ' /' to either '/topics' or '/notes'
+        changing ' /' to either '/topics' or '/notes' 
+
+    changing 'topic' to 'discription' in topics actions
+        same with the topic form
+
+I think im on to something with this form but now I cant enter anything into either of the text inputs for adding a topic
+
+    now I can enter the text in (description is working) but nothing is being saved
+
+    fixed spelling of discription in topics actions
+
+ITS ALIVE !!!!!!!!!
+im now able to save multiple notes and multiple topics (currently with a paragraph of phrases) each with timestamps
+
+Next I want to 

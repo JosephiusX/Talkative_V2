@@ -66,7 +66,7 @@ export default class NoteForm extends React.Component {
             isOutsideRange={() => false}
           />
           <textarea
-            placeholder="Add a note for your note (optional)"
+            placeholder="Add a note for later"
             value={this.state.note}
             onChange={this.onNoteChange}
           >

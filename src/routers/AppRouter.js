@@ -14,12 +14,14 @@ const AppRouter = () => (
     <div>
       <Header />
       <Switch>
+        {/* TOPICS */}
         <Route path="/topics" component={TopicsPage} exact={true} />
-        <Route path="/notes" component={NotesPage} />
         <Route path="/create_topic" component={AddTopicPage} />
+        <Route path="/edit_topic/:id" component={EditTopicPage} />
+        {/* NOTES */}
+        <Route path="/notes" component={NotesPage} />
         <Route path="/create_note" component={AddNotePage} />
         <Route path="/edit_note/:id" component={EditNotePage} />
-        <Route path="/edit_topic/:id" component={EditTopicPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

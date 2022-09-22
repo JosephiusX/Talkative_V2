@@ -8,18 +8,25 @@ export default class TopicForm extends React.Component {
     super(props);
 
     this.state = {
-      topic: props.topic ? props.topic.topic : '',
+      description: props.topic ? props.topic.description : '',
       phrases: props.topic ? props.topic.phrases : '',
+      createdAt: props.phrases ? moment(props.phrases.createdAt) : moment(),
+      calendarFocused: false,
       error: ''
     };
   }
-  onTopicChange = (e) => {
-    const topic = e.target.value;
-    this.setState(() => ({ topic }));
+  onDescriptionChange = (e) => {
+    const description = e.target.value;
+    this.setState(() => ({ description }));
   };
   onPhrasesChange = (e) => {
     const phrases = e.target.value;
     this.setState(() => ({ phrases }));
+  };
+  onDateChange = (createdAt) => {
+    if (createdAt) {
+      this.setState(() => ({ createdAt }));
+    }
   };
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
@@ -27,12 +34,13 @@ export default class TopicForm extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    if (!this.state.topic) {
-      this.setState(() => ({ error: 'Please provide topic' }));
+    if (!this.state.description) {
+      this.setState(() => ({ error: 'Please provide description' }));
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
-        topic: this.state.topic,
+        description: this.state.description,
+        createdAt: this.state.createdAt.valueOf(),
         phrases: this.state.phrases
       });
     }
@@ -44,10 +52,18 @@ export default class TopicForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
-            placeholder="topic"
+            placeholder="description here"
             autoFocus
-            value={this.state.topic}
-            onChange={this.onTopicChange}
+            value={this.state.description}
+            onChange={this.onDescriptionChange}
+          />
+           <SingleDatePicker
+            date={this.state.createdAt}
+            onDateChange={this.onDateChange}
+            focused={this.state.calendarFocused}
+            onFocusChange={this.onFocusChange}
+            numberOfMonths={1}
+            isOutsideRange={() => false}
           />
           <textarea
             placeholder="Add a phrases for your topic (optional)"

@@ -1,7 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import NoteList from '../Notes/NoteList';
 import NoteListFilters from '../Notes/NoteListFilters';
-import { NavLink } from 'react-router-dom';
 
 
 const NotesPage = () => (
