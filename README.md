@@ -73,3 +73,5 @@ ITS ALIVE !!!!!!!!!
 im now able to save multiple notes and multiple topics (currently with a paragraph of phrases) each with timestamps
 
 Lets remove datepicker from topics
+
+    CHANGES TO COMMIT
