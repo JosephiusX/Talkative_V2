@@ -72,4 +72,4 @@ I think im on to something with this form but now I cant enter anything into eit
 ITS ALIVE !!!!!!!!!
 im now able to save multiple notes and multiple topics (currently with a paragraph of phrases) each with timestamps
 
-Next I want to 
+Lets remove datepicker from topics
