@@ -6,8 +6,8 @@ const NoteListItem = ({ id, title, note, createdAt }) => (
     <Link to={`/edit_note)/${id}`}>
       <h3>{title}</h3>
       <p>{note}</p>
+      <p>{createdAt}</p>
     </Link>
-    <p>{createdAt}</p>
   </div>
 );
 

@@ -10,8 +10,6 @@ export default class TopicForm extends React.Component {
     this.state = {
       description: props.topic ? props.topic.description : '',
       phrases: props.topic ? props.topic.phrases : '',
-      createdAt: props.phrases ? moment(props.phrases.createdAt) : moment(),
-      calendarFocused: false,
       error: ''
     };
   }
@@ -23,14 +21,6 @@ export default class TopicForm extends React.Component {
     const phrases = e.target.value;
     this.setState(() => ({ phrases }));
   };
-  onDateChange = (createdAt) => {
-    if (createdAt) {
-      this.setState(() => ({ createdAt }));
-    }
-  };
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({ calendarFocused: focused }));
-  };
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -40,7 +30,6 @@ export default class TopicForm extends React.Component {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
         description: this.state.description,
-        createdAt: this.state.createdAt.valueOf(),
         phrases: this.state.phrases
       });
     }
@@ -56,14 +45,6 @@ export default class TopicForm extends React.Component {
             autoFocus
             value={this.state.description}
             onChange={this.onDescriptionChange}
-          />
-           <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
           />
           <textarea
             placeholder="Add a phrases for your topic (optional)"

@@ -34,16 +34,6 @@ class NoteListFilters extends React.Component {
         >
           <option value="date">Date</option>
         </select>
-        <DateRangePicker
-          startDate={this.props.filters.startDate}
-          endDate={this.props.filters.endDate}
-          onDatesChange={this.onDatesChange}
-          focusedInput={this.state.calendarFocused}
-          onFocusChange={this.onFocusChange}
-          showClearDates={true}
-          numberOfMonths={1}
-          isOutsideRange={() => false}
-        />
       </div>
     );
   }

@@ -2,17 +2,10 @@ import moment from 'moment';
 
 // Get visible topics
 
-export default (topics, { text, sortBy, startDate, endDate }) => {
+export default (topics, { text }) => {
   return topics.filter((topic) => {
-    const createdAtMoment = moment(topic.createdAt);
-    const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
-    const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
     const textMatch = topic.description.toLowerCase().includes(text.toLowerCase());
 
-    return startDateMatch && endDateMatch && textMatch;
-  }).sort((a, b) => {
-    if (sortBy === 'date') {
-      return a.createdAt < b.createdAt ? 1 : -1;
-    }
+    return textMatch;
   });
 };

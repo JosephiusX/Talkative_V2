@@ -5,7 +5,6 @@ export const addTopic = (
   {
     description = '',
     phrases = '',
-    createdAt = 0,
   } = {}
 ) => ({
   type: 'ADD_TOPIC',
@@ -13,7 +12,6 @@ export const addTopic = (
     id: uuid(),
     description,
     phrases,
-    createdAt,
   }                                                                                            
 });
 
