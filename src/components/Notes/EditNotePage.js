@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NoteForm from '../Notes/NoteForm';
+import NoteForm from './NoteForm';
 import { editNote, removeNote } from '../../actions/notes';
 
 const EditNotePage = (props) => {

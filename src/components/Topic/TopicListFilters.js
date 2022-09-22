@@ -24,16 +24,6 @@ class NoteListFilters extends React.Component {
             this.props.dispatch(setTextFilter(e.target.value));
           }}
         />
-        <select
-          value={this.props.filters.sortBy}
-          onChange={(e) => {
-            if (e.target.value === 'date') {
-              this.props.dispatch(sortByDate());
-            }
-          }}
-        >
-          <option value="date">Date</option>
-        </select>
       </div>
     );
   }
