@@ -15,6 +15,7 @@ export const addTopic = (
   }                                                                                            
 });
 
+
 // REMOVE_TOPIC
 export const removeTopic = ({ id  } = {}) => ({
   type: 'REMOVE_TOPIC',
@@ -27,3 +28,19 @@ export const editTopic = (id, updates) => ({
   id,
   updates,
 });
+
+export const addPhrase = ({ id } = {}) => ({
+  type: 'ADD_PHRASE',
+  id,
+})
+
+export const removePhrase = ({ id } = {}) => ({
+  type: 'REMOVE_PHRASE',
+  id,
+})
+
+export const editPhrase = ({ id } = {}) => ({
+  type: 'EDIT_PHRASE', 
+  id,
+  updates,
+})

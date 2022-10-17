@@ -83,3 +83,11 @@ Edit Notes is working along with Topics. good time to save in
 in actions/topics.js, turned phrases into an array
 
 # working on phraselist and phraseListItem in Topics
+
+    done and done
+
+# check the selector
+
+    created phrases.js 
+
+in actions/topics i add edit ,add and remove, phrase
