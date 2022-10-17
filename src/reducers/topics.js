@@ -33,7 +33,7 @@ export default (state = topicsReducerDefaultState, action) => {
       return state.map((phrase) => {
         if (phrase.id === action.id) {
           return {
-            ...phrase,
+            ...phrases,
             ...action.updates
           };
         } else {
