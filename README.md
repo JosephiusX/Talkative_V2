@@ -75,3 +75,11 @@ im now able to save multiple notes and multiple topics (currently with a paragra
 Lets remove datepicker from topics
 
     CHANGES TO COMMIT
+
+Edit Notes is working along with Topics. good time to save in 
+
+# Working on Phrases
+
+in actions/topics.js, turned phrases into an array
+
+# working on phraselist and phraseListItem in Topics

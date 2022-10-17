@@ -4,19 +4,19 @@ import uuid from 'uuid';
 export const addTopic = (
   {
     description = '',
-    phrases = '',
+    phrases =  [],
   } = {}
 ) => ({
   type: 'ADD_TOPIC',
   topic: {
     id: uuid(),
     description,
-    phrases,
+    phrases
   }                                                                                            
 });
 
 // REMOVE_TOPIC
-export const removeTopic = ({ id } = {}) => ({
+export const removeTopic = ({ id  } = {}) => ({
   type: 'REMOVE_TOPIC',
   id,
 });
