@@ -103,3 +103,7 @@ now I want to redirect to TopicPhraseForm once the topic is created
     EditPhrasePage.js: done
     PhrasesPage.js: done
     PhraseListFilters.js done
+
+# adding Phrase routes
+
+    

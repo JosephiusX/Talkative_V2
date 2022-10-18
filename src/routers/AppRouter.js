@@ -18,6 +18,10 @@ const AppRouter = () => (
         <Route path="/topics" component={TopicsPage} exact={true} />
         <Route path="/create_topic" component={AddTopicPage} />
         <Route path="/edit_topic/:id" component={EditTopicPage} />
+        {/* PHRASE */}
+        <Route path="/phrases" component={PhrasesPage} />
+        <Route path="/create_phrase" component={AddPhrasePage} />
+        <Route path="/edit_phrase/:id" component={EditPhrasePage} />
         {/* NOTES */}
         <Route path="/notes" component={NotesPage} />
         <Route path="/create_note" component={AddNotePage} />
