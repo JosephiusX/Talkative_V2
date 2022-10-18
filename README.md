@@ -100,6 +100,6 @@ now I want to redirect to TopicPhraseForm once the topic is created
     - PhraseListItem: done
 
     - AddPhrasePage.js:done
-    EditPhrasePage.js: 
-    PhrasesPage.js:
-    PhraseListFilters.js
+    EditPhrasePage.js: done
+    PhrasesPage.js: done
+    PhraseListFilters.js done
