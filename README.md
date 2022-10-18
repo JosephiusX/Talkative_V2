@@ -83,3 +83,12 @@ Edit Notes is working along with Topics. good time to save in
 in actions/topics.js, turned phrases into an array
 
 # working on phraselist and phraseListItem in Topics
+
+I want to remove the option to add pharase originally until redirected after the topic is created.
+
+    - removed phrases from topics actions
+
+the form   
+
+    - create TopicPhrasesForm.js
+    - remove the phrases code from TopicForm and impliment it in TopicPhrasesForm

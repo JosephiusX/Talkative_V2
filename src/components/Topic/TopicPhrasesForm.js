@@ -5,13 +5,17 @@ export default class TopicForm extends React.Component {
     super(props);
 
     this.state = {
-      description: props.topic ? props.topic.description : '',
+      phrases: props.topic ? props.topic.phrases : '',
       error: ''
     };
   }
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }));
+  };
+  onPhrasesChange = (e) => {
+    const phrases = e.target.value;
+    this.setState(() => ({ phrases }));
   };
   onSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +26,7 @@ export default class TopicForm extends React.Component {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
         description: this.state.description,
+        phrases: this.state.phrases
       });
     }
   };
@@ -32,12 +37,12 @@ export default class TopicForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
-            placeholder="description here"
             autoFocus
-            value={this.state.description}
-            onChange={this.onDescriptionChange}
+            placeholder="Add a phrases for your topic (optional)"
+            value={this.state.phrases}
+            onChange={this.onPhrasesChange}
           />
-      
+          
           <button>Add topic</button>
         </form>
       </div>
