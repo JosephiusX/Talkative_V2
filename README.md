@@ -94,3 +94,12 @@ the form
     - remove the phrases code from TopicForm and impliment it in TopicPhrasesForm
 
 now I want to redirect to TopicPhraseForm once the topic is created 
+
+    - make phrase folder in components: done
+    - move over - PhraseForm -PhraseList 
+    - PhraseListItem: done
+
+    - AddPhrasePage.js:done
+    EditPhrasePage.js: 
+    PhrasesPage.js:
+    PhraseListFilters.js

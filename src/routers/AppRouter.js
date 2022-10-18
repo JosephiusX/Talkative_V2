@@ -13,7 +13,7 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
-      <Switch>
+      <Switch> 
         {/* TOPICS */}
         <Route path="/topics" component={TopicsPage} exact={true} />
         <Route path="/create_topic" component={AddTopicPage} />

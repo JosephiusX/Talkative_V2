@@ -5,7 +5,7 @@ import selectTopics from '../../selectors/topics';
 
 const TopicList = (props) => (
   <div>
-    <h1>Topic List</h1>
+    <h1>Topics List</h1>
     {props.topics.map((topic) => {
       return <TopicListItem key={topic.id} {...topic} />;
     })}
