@@ -1,18 +1,14 @@
 import React from 'react';
 
-export default class TopicForm extends React.Component {
+export default class PhraseForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      phrases: props.topic ? props.topic.phrases : '',
+      phrases: props.phrase ? props.phrase.phrases : '',
       error: ''
     };
   }
-  onDescriptionChange = (e) => {
-    const description = e.target.value;
-    this.setState(() => ({ description }));
-  };
   onPhrasesChange = (e) => {
     const phrases = e.target.value;
     this.setState(() => ({ phrases }));
@@ -21,11 +17,10 @@ export default class TopicForm extends React.Component {
     e.preventDefault();
 
     if (!this.state.description) {
-      this.setState(() => ({ error: 'Please provide description' }));
+      this.setState(() => ({ error: 'Please provide phrase' }));
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
-        description: this.state.description,
         phrases: this.state.phrases
       });
     }
@@ -38,12 +33,11 @@ export default class TopicForm extends React.Component {
           <input
             type="text"
             autoFocus
-            placeholder="Add a phrases for your topic (optional)"
+            placeholder="Add a phrases for your phrase (optional)"
             value={this.state.phrases}
             onChange={this.onPhrasesChange}
           />
-          
-          <button>Add topic</button>
+          <button>Add phrase</button>
         </form>
       </div>
     )

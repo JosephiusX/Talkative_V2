@@ -92,3 +92,5 @@ the form
 
     - create TopicPhrasesForm.js
     - remove the phrases code from TopicForm and impliment it in TopicPhrasesForm
+
+now I want to redirect to TopicPhraseForm once the topic is created 
